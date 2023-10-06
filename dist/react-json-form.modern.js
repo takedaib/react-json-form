@@ -1,4 +1,4 @@
-import React$1 from 'react';
+import React from 'react';
 import ReactModal from 'react-modal';
 import ReactDOM from 'react-dom';
 
@@ -42,7 +42,7 @@ const FIELD_NAME_PREFIX = 'rjf';
 /* Filler item for arrays to make them at least minItems long */
 const FILLER = '__RJF_FILLER__';
 
-const EditorContext = /*#__PURE__*/React$1.createContext();
+const EditorContext = /*#__PURE__*/React.createContext();
 function capitalize$1(string) {
   if (!string) return '';
   return string.charAt(0).toUpperCase() + string.substr(1).toLowerCase();
@@ -501,25 +501,25 @@ function Icon(props) {
   let icon;
   switch (props.name) {
     case 'chevron-up':
-      icon = /*#__PURE__*/React$1.createElement(ChevronUp, null);
+      icon = /*#__PURE__*/React.createElement(ChevronUp, null);
       break;
     case 'chevron-down':
-      icon = /*#__PURE__*/React$1.createElement(ChevronDown, null);
+      icon = /*#__PURE__*/React.createElement(ChevronDown, null);
       break;
     case 'arrow-down':
-      icon = /*#__PURE__*/React$1.createElement(ArrowDown, null);
+      icon = /*#__PURE__*/React.createElement(ArrowDown, null);
       break;
     case 'x-lg':
-      icon = /*#__PURE__*/React$1.createElement(XLg, null);
+      icon = /*#__PURE__*/React.createElement(XLg, null);
       break;
     case 'x-circle':
-      icon = /*#__PURE__*/React$1.createElement(XCircle, null);
+      icon = /*#__PURE__*/React.createElement(XCircle, null);
       break;
     case 'three-dots-vertical':
-      icon = /*#__PURE__*/React$1.createElement(ThreeDotsVertical, null);
+      icon = /*#__PURE__*/React.createElement(ThreeDotsVertical, null);
       break;
   }
-  return /*#__PURE__*/React$1.createElement("svg", {
+  return /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     width: "16",
     height: "16",
@@ -529,42 +529,42 @@ function Icon(props) {
   }, icon);
 }
 function ChevronUp(props) {
-  return /*#__PURE__*/React$1.createElement("path", {
+  return /*#__PURE__*/React.createElement("path", {
     fillRule: "evenodd",
     d: "M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"
   });
 }
 function ChevronDown(props) {
-  return /*#__PURE__*/React$1.createElement("path", {
+  return /*#__PURE__*/React.createElement("path", {
     fillRule: "evenodd",
     d: "M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
   });
 }
 function ArrowDown(props) {
-  return /*#__PURE__*/React$1.createElement("path", {
+  return /*#__PURE__*/React.createElement("path", {
     "fill-rule": "evenodd",
     d: "M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
   });
 }
 function XLg(props) {
-  return /*#__PURE__*/React$1.createElement("path", {
+  return /*#__PURE__*/React.createElement("path", {
     d: "M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
   });
 }
 function XCircle(props) {
-  return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, /*#__PURE__*/React$1.createElement("path", {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
     d: "M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-  }), /*#__PURE__*/React$1.createElement("path", {
+  }), /*#__PURE__*/React.createElement("path", {
     d: "M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
   }));
 }
 function ThreeDotsVertical(props) {
-  return /*#__PURE__*/React$1.createElement("path", {
+  return /*#__PURE__*/React.createElement("path", {
     d: "M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
   });
 }
 
-class TimePicker extends React$1.Component {
+class TimePicker extends React.Component {
   constructor(...args) {
     super(...args);
     this.sendValue = data => {
@@ -635,124 +635,124 @@ class TimePicker extends React$1.Component {
     this.sendValue(data);
   }
   render() {
-    return /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker"
-    }, /*#__PURE__*/React$1.createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-row rjf-time-picker-labels"
-    }, /*#__PURE__*/React$1.createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col"
-    }, "Hrs"), /*#__PURE__*/React$1.createElement("div", {
+    }, "Hrs"), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col rjf-time-picker-col-sm"
-    }), /*#__PURE__*/React$1.createElement("div", {
+    }), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col"
-    }, "Min"), /*#__PURE__*/React$1.createElement("div", {
+    }, "Min"), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col rjf-time-picker-col-sm"
-    }), /*#__PURE__*/React$1.createElement("div", {
+    }), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col"
-    }, "Sec"), /*#__PURE__*/React$1.createElement("div", {
+    }, "Sec"), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col rjf-time-picker-col-sm"
-    }), /*#__PURE__*/React$1.createElement("div", {
+    }), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col"
-    }, "am/pm")), /*#__PURE__*/React$1.createElement("div", {
+    }, "am/pm")), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-row"
-    }, /*#__PURE__*/React$1.createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col"
-    }, /*#__PURE__*/React$1.createElement(Button, {
+    }, /*#__PURE__*/React.createElement(Button, {
       onClick: () => this.handleSpin('hh', 'up')
-    }, /*#__PURE__*/React$1.createElement(Icon, {
+    }, /*#__PURE__*/React.createElement(Icon, {
       name: "chevron-up"
-    }))), /*#__PURE__*/React$1.createElement("div", {
+    }))), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col rjf-time-picker-col-sm"
-    }), /*#__PURE__*/React$1.createElement("div", {
+    }), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col"
-    }, /*#__PURE__*/React$1.createElement(Button, {
+    }, /*#__PURE__*/React.createElement(Button, {
       onClick: () => this.handleSpin('mm', 'up')
-    }, /*#__PURE__*/React$1.createElement(Icon, {
+    }, /*#__PURE__*/React.createElement(Icon, {
       name: "chevron-up"
-    }))), /*#__PURE__*/React$1.createElement("div", {
+    }))), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col rjf-time-picker-col-sm"
-    }), /*#__PURE__*/React$1.createElement("div", {
+    }), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col"
-    }, /*#__PURE__*/React$1.createElement(Button, {
+    }, /*#__PURE__*/React.createElement(Button, {
       onClick: () => this.handleSpin('ss', 'up')
-    }, /*#__PURE__*/React$1.createElement(Icon, {
+    }, /*#__PURE__*/React.createElement(Icon, {
       name: "chevron-up"
-    }))), /*#__PURE__*/React$1.createElement("div", {
+    }))), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col rjf-time-picker-col-sm"
-    }), /*#__PURE__*/React$1.createElement("div", {
+    }), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col"
-    }, /*#__PURE__*/React$1.createElement(Button, {
+    }, /*#__PURE__*/React.createElement(Button, {
       onClick: () => this.handleSpin('ampm', 'up')
-    }, /*#__PURE__*/React$1.createElement(Icon, {
+    }, /*#__PURE__*/React.createElement(Icon, {
       name: "chevron-up"
-    })))), /*#__PURE__*/React$1.createElement("div", {
+    })))), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-row rjf-time-picker-values"
-    }, /*#__PURE__*/React$1.createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col"
-    }, /*#__PURE__*/React$1.createElement("input", {
+    }, /*#__PURE__*/React.createElement("input", {
       type: "text",
       "data-name": "hh",
       value: this.props.hh,
       onChange: this.handleChange,
       onBlur: this.handleBlur,
       onKeyDown: this.handleKeyDown
-    })), /*#__PURE__*/React$1.createElement("div", {
+    })), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col rjf-time-picker-col-sm"
-    }, ":"), /*#__PURE__*/React$1.createElement("div", {
+    }, ":"), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col"
-    }, /*#__PURE__*/React$1.createElement("input", {
+    }, /*#__PURE__*/React.createElement("input", {
       type: "text",
       "data-name": "mm",
       value: this.props.mm,
       onChange: this.handleChange,
       onBlur: this.handleBlur,
       onKeyDown: this.handleKeyDown
-    })), /*#__PURE__*/React$1.createElement("div", {
+    })), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col rjf-time-picker-col-sm"
-    }, ":"), /*#__PURE__*/React$1.createElement("div", {
+    }, ":"), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col"
-    }, /*#__PURE__*/React$1.createElement("input", {
+    }, /*#__PURE__*/React.createElement("input", {
       type: "text",
       "data-name": "ss",
       value: this.props.ss,
       onChange: this.handleChange,
       onBlur: this.handleBlur,
       onKeyDown: this.handleKeyDown
-    })), /*#__PURE__*/React$1.createElement("div", {
+    })), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col rjf-time-picker-col-sm"
-    }), /*#__PURE__*/React$1.createElement("div", {
+    }), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col"
-    }, this.props.ampm)), /*#__PURE__*/React$1.createElement("div", {
+    }, this.props.ampm)), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-row"
-    }, /*#__PURE__*/React$1.createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col"
-    }, /*#__PURE__*/React$1.createElement(Button, {
+    }, /*#__PURE__*/React.createElement(Button, {
       onClick: () => this.handleSpin('hh', 'down')
-    }, /*#__PURE__*/React$1.createElement(Icon, {
+    }, /*#__PURE__*/React.createElement(Icon, {
       name: "chevron-down"
-    }))), /*#__PURE__*/React$1.createElement("div", {
+    }))), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col rjf-time-picker-col-sm"
-    }), /*#__PURE__*/React$1.createElement("div", {
+    }), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col"
-    }, /*#__PURE__*/React$1.createElement(Button, {
+    }, /*#__PURE__*/React.createElement(Button, {
       onClick: () => this.handleSpin('mm', 'down')
-    }, /*#__PURE__*/React$1.createElement(Icon, {
+    }, /*#__PURE__*/React.createElement(Icon, {
       name: "chevron-down"
-    }))), /*#__PURE__*/React$1.createElement("div", {
+    }))), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col rjf-time-picker-col-sm"
-    }), /*#__PURE__*/React$1.createElement("div", {
+    }), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col"
-    }, /*#__PURE__*/React$1.createElement(Button, {
+    }, /*#__PURE__*/React.createElement(Button, {
       onClick: () => this.handleSpin('ss', 'down')
-    }, /*#__PURE__*/React$1.createElement(Icon, {
+    }, /*#__PURE__*/React.createElement(Icon, {
       name: "chevron-down"
-    }))), /*#__PURE__*/React$1.createElement("div", {
+    }))), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col rjf-time-picker-col-sm"
-    }), /*#__PURE__*/React$1.createElement("div", {
+    }), /*#__PURE__*/React.createElement("div", {
       className: "rjf-time-picker-col"
-    }, /*#__PURE__*/React$1.createElement(Button, {
+    }, /*#__PURE__*/React.createElement(Button, {
       onClick: () => this.handleSpin('ampm', 'down')
-    }, /*#__PURE__*/React$1.createElement(Icon, {
+    }, /*#__PURE__*/React.createElement(Icon, {
       name: "chevron-down"
     })))));
   }
@@ -766,7 +766,7 @@ const _excluded$1 = ["label", "help_text", "error", "inputRef"],
   _excluded6 = ["label", "help_text", "error", "inputRef"];
 function Label(props) {
   if (!props.label) return null;
-  return /*#__PURE__*/React$1.createElement("label", {
+  return /*#__PURE__*/React.createElement("label", {
     className: props.required ? 'rjf-required' : null
   }, props.children, props.children && ' ', props.label);
 }
@@ -789,15 +789,15 @@ function FormInput(_ref) {
   // readonly inputs are automatically marked disabled
   // if this is undesired, explicitly pass disabled=false
   if (props.readOnly && (props.disabled === undefined || props.disabled === null)) props.disabled = true;
-  return /*#__PURE__*/React$1.createElement("div", wrapperProps, /*#__PURE__*/React$1.createElement(Label, {
+  return /*#__PURE__*/React.createElement("div", wrapperProps, /*#__PURE__*/React.createElement(Label, {
     label: label,
     required: props.required
-  }), /*#__PURE__*/React$1.createElement("div", {
+  }), /*#__PURE__*/React.createElement("div", {
     className: error ? "rjf-input-group has-error" : "rjf-input-group"
-  }, props.children || /*#__PURE__*/React$1.createElement("input", props), error && error.map((error, i) => /*#__PURE__*/React$1.createElement("span", {
+  }, props.children || /*#__PURE__*/React.createElement("input", props), error && error.map((error, i) => /*#__PURE__*/React.createElement("span", {
     className: "rjf-error-text",
     key: i
-  }, error)), help_text && /*#__PURE__*/React$1.createElement("span", {
+  }, error)), help_text && /*#__PURE__*/React.createElement("span", {
     className: "rjf-help-text"
   }, help_text)));
 }
@@ -814,15 +814,15 @@ function FormCheckInput(_ref2) {
   if (props.checked === undefined) props.checked = value;
   if (props.checked === '' || props.checked === null || props.checked === undefined) props.checked = false;
   if (props.readOnly) props.disabled = true;
-  return /*#__PURE__*/React$1.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: error ? "rjf-check-input has-error" : "rjf-check-input"
-  }, /*#__PURE__*/React$1.createElement(Label, {
+  }, /*#__PURE__*/React.createElement(Label, {
     label: label,
     required: props.required
-  }, /*#__PURE__*/React$1.createElement("input", props)), error && error.map((error, i) => /*#__PURE__*/React$1.createElement("span", {
+  }, /*#__PURE__*/React.createElement("input", props)), error && error.map((error, i) => /*#__PURE__*/React.createElement("span", {
     className: "rjf-error-text",
     key: i
-  }, error)), help_text && /*#__PURE__*/React$1.createElement("span", {
+  }, error)), help_text && /*#__PURE__*/React.createElement("span", {
     className: "rjf-help-text"
   }, help_text));
 }
@@ -836,9 +836,9 @@ function FormRadioInput(_ref3) {
     } = _ref3,
     props = _objectWithoutPropertiesLoose(_ref3, _excluded3);
   if (props.readOnly) props.disabled = true;
-  return /*#__PURE__*/React$1.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: error ? "rjf-check-input has-error" : "rjf-check-input"
-  }, /*#__PURE__*/React$1.createElement(Label, {
+  }, /*#__PURE__*/React.createElement(Label, {
     label: label,
     required: props.required
   }), options.map((option, i) => {
@@ -851,17 +851,17 @@ function FormRadioInput(_ref3) {
       if (typeof title === 'boolean') title = capitalize$1(title.toString());
       inputValue = option;
     }
-    return /*#__PURE__*/React$1.createElement("label", {
+    return /*#__PURE__*/React.createElement("label", {
       className: "rjf-radio-option",
       key: title + '_' + inputValue + '_' + i
-    }, /*#__PURE__*/React$1.createElement("input", _extends({}, props, {
+    }, /*#__PURE__*/React.createElement("input", _extends({}, props, {
       value: inputValue,
       checked: inputValue === value
     })), " ", title);
-  }), error && error.map((error, i) => /*#__PURE__*/React$1.createElement("span", {
+  }), error && error.map((error, i) => /*#__PURE__*/React.createElement("span", {
     className: "rjf-error-text",
     key: i
-  }, error)), help_text && /*#__PURE__*/React$1.createElement("span", {
+  }, error)), help_text && /*#__PURE__*/React.createElement("span", {
     className: "rjf-help-text"
   }, help_text));
 }
@@ -876,14 +876,14 @@ function FormSelectInput(_ref4) {
     props = _objectWithoutPropertiesLoose(_ref4, _excluded4);
   if (props.readOnly) props.disabled = true;
   if (!value && value !== false && value !== 0) value = '';
-  return /*#__PURE__*/React$1.createElement("div", null, /*#__PURE__*/React$1.createElement(Label, {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Label, {
     label: label,
     required: props.required
-  }), /*#__PURE__*/React$1.createElement("div", {
+  }), /*#__PURE__*/React.createElement("div", {
     className: error ? "rjf-input-group has-error" : "rjf-input-group"
-  }, /*#__PURE__*/React$1.createElement("select", _extends({
+  }, /*#__PURE__*/React.createElement("select", _extends({
     value: value
-  }, props), /*#__PURE__*/React$1.createElement("option", {
+  }, props), /*#__PURE__*/React.createElement("option", {
     disabled: true,
     value: "",
     key: '__placeholder'
@@ -897,18 +897,18 @@ function FormSelectInput(_ref4) {
       if (typeof title === 'boolean') title = capitalize$1(title.toString());
       inputValue = option;
     }
-    return /*#__PURE__*/React$1.createElement("option", {
+    return /*#__PURE__*/React.createElement("option", {
       value: inputValue,
       key: title + '_' + inputValue + '_' + i
     }, title);
-  })), error && error.map((error, i) => /*#__PURE__*/React$1.createElement("span", {
+  })), error && error.map((error, i) => /*#__PURE__*/React.createElement("span", {
     className: "rjf-error-text",
     key: i
-  }, error)), help_text && /*#__PURE__*/React$1.createElement("span", {
+  }, error)), help_text && /*#__PURE__*/React.createElement("span", {
     className: "rjf-help-text"
   }, help_text)));
 }
-class FormMultiSelectInput extends React$1.Component {
+class FormMultiSelectInput extends React.Component {
   constructor(props) {
     super(props);
     this.handleChange = e => {
@@ -949,23 +949,23 @@ class FormMultiSelectInput extends React$1.Component {
     this.state = {
       showOptions: false
     };
-    this.optionsContainer = /*#__PURE__*/React$1.createRef();
-    this.input = /*#__PURE__*/React$1.createRef();
+    this.optionsContainer = /*#__PURE__*/React.createRef();
+    this.input = /*#__PURE__*/React.createRef();
   }
   render() {
-    return /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       className: this.props.readOnly ? "rjf-multiselect-field readonly" : "rjf-multiselect-field"
-    }, /*#__PURE__*/React$1.createElement(FormInput, {
+    }, /*#__PURE__*/React.createElement(FormInput, {
       label: this.props.label,
       help_text: this.props.help_text,
       error: this.props.error
-    }, /*#__PURE__*/React$1.createElement(FormMultiSelectInputField, {
+    }, /*#__PURE__*/React.createElement(FormMultiSelectInputField, {
       inputRef: this.input,
       onClick: this.toggleOptions,
       value: this.props.value,
       onChange: this.handleChange,
       disabled: this.props.readOnly
-    })), this.state.showOptions && /*#__PURE__*/React$1.createElement(FormMultiSelectInputOptions, {
+    })), this.state.showOptions && /*#__PURE__*/React.createElement(FormMultiSelectInputOptions, {
       options: this.props.options,
       value: this.props.value,
       hideOptions: this.hideOptions,
@@ -977,7 +977,7 @@ class FormMultiSelectInput extends React$1.Component {
     }));
   }
 }
-class FormMultiSelectInputField extends React$1.Component {
+class FormMultiSelectInputField extends React.Component {
   constructor(...args) {
     super(...args);
     this.handleRemove = (e, index) => {
@@ -994,24 +994,24 @@ class FormMultiSelectInputField extends React$1.Component {
     };
   }
   render() {
-    return /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       className: "rjf-multiselect-field-input",
       onClick: this.props.onClick,
       ref: this.props.inputRef,
       tabIndex: 0
-    }, this.props.value.length ? this.props.value.map((item, index) => /*#__PURE__*/React$1.createElement("span", {
+    }, this.props.value.length ? this.props.value.map((item, index) => /*#__PURE__*/React.createElement("span", {
       className: "rjf-multiselect-field-input-item",
       key: item + '_' + index
-    }, /*#__PURE__*/React$1.createElement("span", null, item), this.props.disabled || /*#__PURE__*/React$1.createElement("button", {
+    }, /*#__PURE__*/React.createElement("span", null, item), this.props.disabled || /*#__PURE__*/React.createElement("button", {
       title: "Remove",
       type: "button",
       onClick: e => this.handleRemove(e, index)
-    }, "\xD7"))) : /*#__PURE__*/React$1.createElement("span", {
+    }, "\xD7"))) : /*#__PURE__*/React.createElement("span", {
       className: "rjf-multiselect-field-input-placeholder"
     }, "Select..."));
   }
 }
-class FormMultiSelectInputOptions extends React$1.Component {
+class FormMultiSelectInputOptions extends React.Component {
   constructor(...args) {
     super(...args);
     this.handleClickOutside = e => {
@@ -1025,9 +1025,9 @@ class FormMultiSelectInputOptions extends React$1.Component {
     document.removeEventListener('mousedown', this.handleClickOutside);
   }
   render() {
-    return /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       ref: this.props.containerRef
-    }, /*#__PURE__*/React$1.createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       className: "rjf-multiselect-field-options-container",
       style: this.props.hasHelpText ? {
         marginTop: '-15px'
@@ -1046,10 +1046,10 @@ class FormMultiSelectInputOptions extends React$1.Component {
       let optionClassName = 'rjf-multiselect-field-option';
       if (selected) optionClassName += ' selected';
       if (this.props.disabled) optionClassName += ' disabled';
-      return /*#__PURE__*/React$1.createElement("div", {
+      return /*#__PURE__*/React.createElement("div", {
         key: title + '_' + inputValue + '_' + i,
         className: optionClassName
-      }, /*#__PURE__*/React$1.createElement("label", null, /*#__PURE__*/React$1.createElement("input", {
+      }, /*#__PURE__*/React.createElement("label", null, /*#__PURE__*/React.createElement("input", {
         type: "checkbox",
         onChange: this.props.onChange,
         value: inputValue,
@@ -1095,7 +1095,7 @@ function dataURItoBlob(dataURI) {
     name
   };
 }
-class FormFileInput extends React$1.Component {
+class FormFileInput extends React.Component {
   constructor(props) {
     super(props);
     this.getFileName = () => {
@@ -1206,7 +1206,7 @@ class FormFileInput extends React$1.Component {
       fileName: this.getFileName(),
       loading: false
     };
-    this.inputRef = /*#__PURE__*/React$1.createRef();
+    this.inputRef = /*#__PURE__*/React.createRef();
   }
   componentDidUpdate(prevProps, prevState) {
     if (this.props.value !== prevProps.value) {
@@ -1228,27 +1228,27 @@ class FormFileInput extends React$1.Component {
     props.type = 'file';
     props.onChange = this.handleChange;
     if (props.readOnly) props.disabled = true;
-    return /*#__PURE__*/React$1.createElement("div", null, /*#__PURE__*/React$1.createElement(Label, {
+    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Label, {
       label: label,
       required: props.required
-    }), /*#__PURE__*/React$1.createElement("div", {
+    }), /*#__PURE__*/React.createElement("div", {
       className: "rjf-file-field"
-    }, this.state.value && /*#__PURE__*/React$1.createElement("div", {
+    }, this.state.value && /*#__PURE__*/React.createElement("div", {
       className: "rjf-current-file-name"
-    }, "Current file: ", /*#__PURE__*/React$1.createElement("span", null, this.state.fileName), " ", ' ', /*#__PURE__*/React$1.createElement(Button, {
+    }, "Current file: ", /*#__PURE__*/React.createElement("span", null, this.state.fileName), " ", ' ', /*#__PURE__*/React.createElement(Button, {
       className: "remove-file",
       onClick: this.clearFile
-    }, "Clear")), this.state.value && !this.state.loading && 'Change:', this.state.loading ? /*#__PURE__*/React$1.createElement("div", {
+    }, "Clear")), this.state.value && !this.state.loading && 'Change:', this.state.loading ? /*#__PURE__*/React.createElement("div", {
       className: "rjf-file-field-loading"
-    }, /*#__PURE__*/React$1.createElement(Loader, null), " Uploading...") : /*#__PURE__*/React$1.createElement("div", {
+    }, /*#__PURE__*/React.createElement(Loader, null), " Uploading...") : /*#__PURE__*/React.createElement("div", {
       className: "rjf-file-field-input"
-    }, /*#__PURE__*/React$1.createElement(FormInput, _extends({}, props, {
+    }, /*#__PURE__*/React.createElement(FormInput, _extends({}, props, {
       inputRef: this.inputRef
     })))));
   }
 }
 FormFileInput.contextType = EditorContext;
-class FormTextareaInput extends React$1.Component {
+class FormTextareaInput extends React.Component {
   constructor(props) {
     super(props);
     this.handleChange = e => {
@@ -1260,7 +1260,7 @@ class FormTextareaInput extends React$1.Component {
       el.style.height = 'auto';
       el.style.height = el.scrollHeight + offset + 'px';
     };
-    if (!props.inputRef) this.inputRef = /*#__PURE__*/React$1.createRef();
+    if (!props.inputRef) this.inputRef = /*#__PURE__*/React.createRef();
   }
   componentDidMount() {
     if (this.props.inputRef) this.updateHeight(this.props.inputRef.current);else this.updateHeight(this.inputRef.current);
@@ -1281,20 +1281,20 @@ class FormTextareaInput extends React$1.Component {
     // readonly inputs are automatically marked disabled
     // if this is undesired, explicitly pass disabled=false
     if (props.readOnly && (props.disabled === undefined || props.disabled === null)) props.disabled = true;
-    return /*#__PURE__*/React$1.createElement("div", null, /*#__PURE__*/React$1.createElement(Label, {
+    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Label, {
       label: label,
       required: props.required
-    }), /*#__PURE__*/React$1.createElement("div", {
+    }), /*#__PURE__*/React.createElement("div", {
       className: error ? "rjf-input-group has-error" : "rjf-input-group"
-    }, /*#__PURE__*/React$1.createElement("textarea", props), error && error.map((error, i) => /*#__PURE__*/React$1.createElement("span", {
+    }, /*#__PURE__*/React.createElement("textarea", props), error && error.map((error, i) => /*#__PURE__*/React.createElement("span", {
       className: "rjf-error-text",
       key: i
-    }, error)), help_text && /*#__PURE__*/React$1.createElement("span", {
+    }, error)), help_text && /*#__PURE__*/React.createElement("span", {
       className: "rjf-help-text"
     }, help_text)));
   }
 }
-class FormDateTimeInput extends React$1.Component {
+class FormDateTimeInput extends React.Component {
   constructor(props) {
     super(props);
     // we maintain this input's state in itself
@@ -1393,8 +1393,8 @@ class FormDateTimeInput extends React$1.Component {
     this.state = _extends({}, this.getStateFromProps(), {
       showTimePicker: false
     });
-    this.timeInput = /*#__PURE__*/React$1.createRef();
-    this.timePickerContainer = /*#__PURE__*/React$1.createRef();
+    this.timeInput = /*#__PURE__*/React.createRef();
+    this.timePickerContainer = /*#__PURE__*/React.createRef();
   }
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.value !== this.props.value) {
@@ -1418,26 +1418,26 @@ class FormDateTimeInput extends React$1.Component {
     document.removeEventListener('mousedown', this.handleClickOutside);
   }
   render() {
-    return /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       className: this.props.error ? "rjf-datetime-field has-error" : "rjf-datetime-field"
-    }, /*#__PURE__*/React$1.createElement(Label, {
+    }, /*#__PURE__*/React.createElement(Label, {
       label: this.props.label,
       required: this.props.required
-    }), /*#__PURE__*/React$1.createElement("div", {
+    }), /*#__PURE__*/React.createElement("div", {
       className: "rjf-datetime-field-inner"
-    }, /*#__PURE__*/React$1.createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       className: this.props.readOnly ? "rjf-datetime-field-inputs readonly" : "rjf-datetime-field-inputs"
-    }, /*#__PURE__*/React$1.createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       className: "rjf-datetime-field-date"
-    }, /*#__PURE__*/React$1.createElement(FormInput, {
+    }, /*#__PURE__*/React.createElement(FormInput, {
       label: "Date",
       type: "date",
       value: this.state.date,
       onChange: this.handleDateChange,
       readOnly: this.props.readOnly
-    })), /*#__PURE__*/React$1.createElement("div", {
+    })), /*#__PURE__*/React.createElement("div", {
       className: "rjf-datetime-field-time"
-    }, /*#__PURE__*/React$1.createElement(FormInput, {
+    }, /*#__PURE__*/React.createElement(FormInput, {
       label: "Time",
       type: "text",
       value: this.state.hh + ':' + this.state.mm + ':' + this.state.ss + ' ' + this.state.ampm,
@@ -1445,24 +1445,24 @@ class FormDateTimeInput extends React$1.Component {
       readOnly: true,
       disabled: this.props.readOnly || false,
       inputRef: this.timeInput
-    }), /*#__PURE__*/React$1.createElement("div", {
+    }), /*#__PURE__*/React.createElement("div", {
       ref: this.timePickerContainer
-    }, this.state.showTimePicker && /*#__PURE__*/React$1.createElement(TimePicker, {
+    }, this.state.showTimePicker && /*#__PURE__*/React.createElement(TimePicker, {
       onChange: this.handleTimeChange,
       hh: this.state.hh,
       mm: this.state.mm,
       ss: this.state.ss,
       ampm: this.state.ampm
-    })))), this.props.error && this.props.error.map((error, i) => /*#__PURE__*/React$1.createElement("span", {
+    })))), this.props.error && this.props.error.map((error, i) => /*#__PURE__*/React.createElement("span", {
       className: "rjf-error-text",
       key: i
-    }, error)), this.props.help_text && /*#__PURE__*/React$1.createElement("span", {
+    }, error)), this.props.help_text && /*#__PURE__*/React.createElement("span", {
       className: "rjf-help-text"
     }, this.props.help_text)));
   }
 }
 
-class AutoCompleteInput extends React$1.Component {
+class AutoCompleteInput extends React.Component {
   constructor(props) {
     super(props);
     this.handleSelect = value => {
@@ -1564,9 +1564,9 @@ class AutoCompleteInput extends React$1.Component {
       options: [],
       loading: false
     };
-    this.optionsContainer = /*#__PURE__*/React$1.createRef();
-    this.searchInputRef = /*#__PURE__*/React$1.createRef();
-    this.input = /*#__PURE__*/React$1.createRef();
+    this.optionsContainer = /*#__PURE__*/React.createRef();
+    this.searchInputRef = /*#__PURE__*/React.createRef();
+    this.input = /*#__PURE__*/React.createRef();
     this.debouncedFetchOptions = debounce(this.fetchOptions, 500);
   }
   componentDidUpdate(prevProps, prevState) {
@@ -1575,9 +1575,9 @@ class AutoCompleteInput extends React$1.Component {
     }
   }
   render() {
-    return /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       className: this.props.label ? 'rjf-autocomplete-field has-label' : 'rjf-autocomplete-field'
-    }, /*#__PURE__*/React$1.createElement(FormInput, {
+    }, /*#__PURE__*/React.createElement(FormInput, {
       label: this.props.label,
       type: "text",
       value: this.props.value,
@@ -1590,13 +1590,13 @@ class AutoCompleteInput extends React$1.Component {
       placeholder: this.props.placeholder,
       name: this.props.name,
       className: "rjf-autocomplete-field-input"
-    }), this.props.value && !this.props.readOnly && /*#__PURE__*/React$1.createElement(Button, {
+    }), this.props.value && !this.props.readOnly && /*#__PURE__*/React.createElement(Button, {
       className: "autocomplete-field-clear",
       title: "Clear",
       onClick: this.clearValue
-    }, /*#__PURE__*/React$1.createElement(Icon, {
+    }, /*#__PURE__*/React.createElement(Icon, {
       name: "x-circle"
-    }), " ", /*#__PURE__*/React$1.createElement("span", null, "Clear")), this.state.showOptions && !this.props.readOnly && /*#__PURE__*/React$1.createElement(AutoCompletePopup, {
+    }), " ", /*#__PURE__*/React.createElement("span", null, "Clear")), this.state.showOptions && !this.props.readOnly && /*#__PURE__*/React.createElement(AutoCompletePopup, {
       options: this.state.options,
       value: this.props.value,
       hideOptions: this.hideOptions,
@@ -1612,7 +1612,7 @@ class AutoCompleteInput extends React$1.Component {
   }
 }
 AutoCompleteInput.contextType = EditorContext;
-class AutoCompletePopup extends React$1.Component {
+class AutoCompletePopup extends React.Component {
   constructor(...args) {
     super(...args);
     this.handleClickOutside = e => {
@@ -1626,19 +1626,19 @@ class AutoCompletePopup extends React$1.Component {
     document.removeEventListener('mousedown', this.handleClickOutside);
   }
   render() {
-    return /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       ref: this.props.containerRef
-    }, /*#__PURE__*/React$1.createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       className: "rjf-autocomplete-field-popup",
       style: this.props.hasHelpText ? {
         marginTop: '-15px'
       } : {}
-    }, /*#__PURE__*/React$1.createElement(AutocompleteSearchBox, {
+    }, /*#__PURE__*/React.createElement(AutocompleteSearchBox, {
       inputRef: this.props.searchInputRef,
       onChange: this.props.onSearchInputChange,
       value: this.props.searchInputValue,
       loading: this.props.loading
-    }), this.props.searchInputValue && /*#__PURE__*/React$1.createElement(AutocompleteOptions, {
+    }), this.props.searchInputValue && /*#__PURE__*/React.createElement(AutocompleteOptions, {
       options: this.props.options,
       value: this.props.value,
       onSelect: this.props.onSelect,
@@ -1648,21 +1648,21 @@ class AutoCompletePopup extends React$1.Component {
   }
 }
 function AutocompleteSearchBox(props) {
-  return /*#__PURE__*/React$1.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "rjf-autocomplete-field-search"
-  }, /*#__PURE__*/React$1.createElement(FormInput, {
+  }, /*#__PURE__*/React.createElement(FormInput, {
     type: "text",
     placeholder: "Search...",
     inputRef: props.inputRef,
     onChange: props.onChange,
     value: props.value,
     form: ""
-  }), props.loading && /*#__PURE__*/React$1.createElement(Loader, null));
+  }), props.loading && /*#__PURE__*/React.createElement(Loader, null));
 }
 function AutocompleteOptions(props) {
-  return /*#__PURE__*/React$1.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "rjf-autocomplete-field-options"
-  }, !props.options.length && !props.loading && /*#__PURE__*/React$1.createElement("div", {
+  }, !props.options.length && !props.loading && /*#__PURE__*/React.createElement("div", {
     className: "rjf-autocomplete-field-option disabled"
   }, "No options"), props.options.map((option, i) => {
     let title, inputValue;
@@ -1677,7 +1677,7 @@ function AutocompleteOptions(props) {
     let selected = props.value === inputValue;
     let optionClassName = 'rjf-autocomplete-field-option';
     if (selected) optionClassName += ' selected';
-    return /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       key: title + '_' + inputValue + '_' + i,
       className: optionClassName,
       tabIndex: 0,
@@ -1689,9 +1689,9 @@ function AutocompleteOptions(props) {
 
 function GroupTitle(props) {
   if (!props.children) return null;
-  return /*#__PURE__*/React$1.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "rjf-form-group-title"
-  }, props.editable ? /*#__PURE__*/React$1.createElement("span", null, props.children, " ", /*#__PURE__*/React$1.createElement(Button, {
+  }, props.editable ? /*#__PURE__*/React.createElement("span", null, props.children, " ", /*#__PURE__*/React.createElement(Button, {
     className: "edit",
     onClick: props.onEdit,
     title: "Edit"
@@ -1699,7 +1699,7 @@ function GroupTitle(props) {
 }
 function GroupDescription(props) {
   if (!props.children) return null;
-  return /*#__PURE__*/React$1.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "rjf-form-group-description"
   }, props.children);
 }
@@ -1755,52 +1755,52 @@ function animate(e, animation, callback) {
   }, 200);
 }
 function FormRowControls(props) {
-  return /*#__PURE__*/React$1.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "rjf-form-row-controls"
-  }, props.onMoveUp && /*#__PURE__*/React$1.createElement(Button, {
+  }, props.onMoveUp && /*#__PURE__*/React.createElement(Button, {
     className: "move-up",
     onClick: e => animate(e, 'move-up', props.onMoveUp),
     title: "Move up"
-  }, /*#__PURE__*/React$1.createElement("span", null, "\u2191")), props.onMoveDown && /*#__PURE__*/React$1.createElement(Button, {
+  }, /*#__PURE__*/React.createElement("span", null, "\u2191")), props.onMoveDown && /*#__PURE__*/React.createElement(Button, {
     className: "move-down",
     onClick: e => animate(e, 'move-down', props.onMoveDown),
     title: "Move down"
-  }, /*#__PURE__*/React$1.createElement("span", null, "\u2193")), props.onRemove && /*#__PURE__*/React$1.createElement(Button, {
+  }, /*#__PURE__*/React.createElement("span", null, "\u2193")), props.onRemove && /*#__PURE__*/React.createElement(Button, {
     className: "remove",
     onClick: e => animate(e, 'remove', props.onRemove),
     title: "Remove"
-  }, /*#__PURE__*/React$1.createElement("span", null, "\xD7")));
+  }, /*#__PURE__*/React.createElement("span", null, "\xD7")));
 }
 function FormRow(props) {
   let className = 'rjf-form-row';
   if (props.hidden) className += ' rjf-form-row-hidden';
-  return /*#__PURE__*/React$1.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: className
-  }, /*#__PURE__*/React$1.createElement(FormRowControls, props), /*#__PURE__*/React$1.createElement("div", {
+  }, /*#__PURE__*/React.createElement(FormRowControls, props), /*#__PURE__*/React.createElement("div", {
     className: "rjf-form-row-inner"
   }, props.children));
 }
 function FormGroup(props) {
-  let hasChildren = React$1.Children.count(props.children);
+  let hasChildren = React.Children.count(props.children);
   let innerClassName = props.level === 0 && !hasChildren ? "" : "rjf-form-group-inner";
-  return /*#__PURE__*/React$1.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "rjf-form-group"
-  }, props.level === 0 && /*#__PURE__*/React$1.createElement(GroupTitle, {
+  }, props.level === 0 && /*#__PURE__*/React.createElement(GroupTitle, {
     editable: props.editable,
     onEdit: props.onEdit
-  }, props.schema.title), props.level === 0 && /*#__PURE__*/React$1.createElement(GroupDescription, null, props.schema.description), /*#__PURE__*/React$1.createElement("div", {
+  }, props.schema.title), props.level === 0 && /*#__PURE__*/React.createElement(GroupDescription, null, props.schema.description), /*#__PURE__*/React.createElement("div", {
     className: innerClassName
-  }, props.level > 0 && /*#__PURE__*/React$1.createElement(GroupTitle, {
+  }, props.level > 0 && /*#__PURE__*/React.createElement(GroupTitle, {
     editable: props.editable,
     onEdit: props.onEdit
-  }, props.schema.title), props.level > 0 && /*#__PURE__*/React$1.createElement(GroupDescription, null, props.schema.description), props.children, props.addable && /*#__PURE__*/React$1.createElement(Button, {
+  }, props.schema.title), props.level > 0 && /*#__PURE__*/React.createElement(GroupDescription, null, props.schema.description), props.children, props.addable && /*#__PURE__*/React.createElement(Button, {
     className: "add",
     onClick: e => props.onAdd(),
     title: props.schema.type === 'object' ? 'Add new key' : 'Add new item'
   }, props.schema.type === 'object' ? 'Add key' : 'Add item')));
 }
 
-class FileUploader extends React$1.Component {
+class FileUploader extends React.Component {
   constructor(props) {
     super(props);
     this.openModal = e => {
@@ -1915,37 +1915,37 @@ class FileUploader extends React$1.Component {
       open: false,
       pane: 'upload'
     };
-    this.hiddenInputRef = /*#__PURE__*/React$1.createRef();
+    this.hiddenInputRef = /*#__PURE__*/React.createRef();
     this.newFiles = []; // track new uploaded files to send DELETE request
     // on page exit if unsaved
     this.exitListenersAdded = false;
   }
   render() {
     if (!this.props.handler && !this.context.fileHandler) {
-      return /*#__PURE__*/React$1.createElement(FormFileInput, this.props);
+      return /*#__PURE__*/React.createElement(FormFileInput, this.props);
     }
-    return /*#__PURE__*/React$1.createElement("div", null, /*#__PURE__*/React$1.createElement(Label, {
+    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Label, {
       label: this.props.label,
       required: this.props.required
-    }), /*#__PURE__*/React$1.createElement("div", {
+    }), /*#__PURE__*/React.createElement("div", {
       className: "rjf-file-field"
-    }, this.props.value && /*#__PURE__*/React$1.createElement("div", {
+    }, this.props.value && /*#__PURE__*/React.createElement("div", {
       className: "rjf-current-file-name"
-    }, "Current file: ", /*#__PURE__*/React$1.createElement("span", null, this.props.value), " ", ' ', /*#__PURE__*/React$1.createElement(Button, {
+    }, "Current file: ", /*#__PURE__*/React.createElement("span", null, this.props.value), " ", ' ', /*#__PURE__*/React.createElement(Button, {
       className: "remove-file",
       onClick: this.clearFile
-    }, "Clear")), /*#__PURE__*/React$1.createElement(Button, {
+    }, "Clear")), /*#__PURE__*/React.createElement(Button, {
       onClick: this.openModal,
       className: "upload-modal__open"
-    }, this.props.value ? 'Change file' : 'Select file'), this.props.error && this.props.error.map((error, i) => /*#__PURE__*/React$1.createElement("span", {
+    }, this.props.value ? 'Change file' : 'Select file'), this.props.error && this.props.error.map((error, i) => /*#__PURE__*/React.createElement("span", {
       className: "rjf-error-text",
       key: i
-    }, error)), this.props.help_text && /*#__PURE__*/React$1.createElement("span", {
+    }, error)), this.props.help_text && /*#__PURE__*/React.createElement("span", {
       className: "rjf-help-text"
-    }, this.props.help_text)), /*#__PURE__*/React$1.createElement("input", {
+    }, this.props.help_text)), /*#__PURE__*/React.createElement("input", {
       type: "hidden",
       ref: this.hiddenInputRef
-    }), /*#__PURE__*/React$1.createElement(ReactModal, {
+    }), /*#__PURE__*/React.createElement(ReactModal, {
       isOpen: this.state.open,
       onRequestClose: this.closeModal,
       contentLabel: "Select file",
@@ -1955,42 +1955,42 @@ class FileUploader extends React$1.Component {
       bodyOpenClassName: "rjf-modal__main-body--open",
       closeTimeoutMS: 150,
       ariaHideApp: false
-    }, /*#__PURE__*/React$1.createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       className: "rjf-modal__content"
-    }, /*#__PURE__*/React$1.createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       className: "rjf-modal__header"
-    }, /*#__PURE__*/React$1.createElement(TabButton, {
+    }, /*#__PURE__*/React.createElement(TabButton, {
       onClick: this.togglePane,
       tabName: "upload",
       active: this.state.pane === "upload"
-    }, "Upload new"), ' ', /*#__PURE__*/React$1.createElement(TabButton, {
+    }, "Upload new"), ' ', /*#__PURE__*/React.createElement(TabButton, {
       onClick: this.togglePane,
       tabName: "library",
       active: this.state.pane === "library"
-    }, "Choose from library"), /*#__PURE__*/React$1.createElement(Button, {
+    }, "Choose from library"), /*#__PURE__*/React.createElement(Button, {
       className: "modal__close",
       onClick: this.closeModal,
       title: "Close (Esc)"
-    }, /*#__PURE__*/React$1.createElement(Icon, {
+    }, /*#__PURE__*/React.createElement(Icon, {
       name: "x-lg"
-    }))), /*#__PURE__*/React$1.createElement("div", {
+    }))), /*#__PURE__*/React.createElement("div", {
       className: "rjf-modal__body"
-    }, this.state.pane === 'upload' && /*#__PURE__*/React$1.createElement(UploadPane, _extends({}, this.props, {
+    }, this.state.pane === 'upload' && /*#__PURE__*/React.createElement(UploadPane, _extends({}, this.props, {
       onChange: this.handleFileUpload,
       label: "",
       value: "",
       help_text: "",
       error: ""
-    })), this.state.pane === 'library' && /*#__PURE__*/React$1.createElement(LibraryPane, {
+    })), this.state.pane === 'library' && /*#__PURE__*/React.createElement(LibraryPane, {
       fileHandler: this.props.handler || this.context.fileHandler,
       fileHandlerArgs: _extends({}, this.context.fileHandlerArgs, {
         coords: getCoordsFromName(this.props.name)
       }),
       onFileSelect: this.handleFileSelect,
       sendDeleteRequest: this.sendDeleteRequest
-    })), /*#__PURE__*/React$1.createElement("div", {
+    })), /*#__PURE__*/React.createElement("div", {
       className: "rjf-modal__footer"
-    }, /*#__PURE__*/React$1.createElement(Button, {
+    }, /*#__PURE__*/React.createElement(Button, {
       className: "modal__footer-close",
       onClick: this.closeModal
     }, "Cancel")))));
@@ -2000,17 +2000,17 @@ FileUploader.contextType = EditorContext;
 function TabButton(props) {
   let className = 'rjf-upload-modal__tab-button';
   if (props.active) className += ' rjf-upload-modal__tab-button--active';
-  return /*#__PURE__*/React$1.createElement("button", {
+  return /*#__PURE__*/React.createElement("button", {
     onClick: () => props.onClick(props.tabName),
     className: className
   }, props.children);
 }
 function UploadPane(props) {
-  return /*#__PURE__*/React$1.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "rjf-upload-modal__pane"
-  }, /*#__PURE__*/React$1.createElement("h3", null, "Upload new"), /*#__PURE__*/React$1.createElement("br", null), /*#__PURE__*/React$1.createElement(FormFileInput, props));
+  }, /*#__PURE__*/React.createElement("h3", null, "Upload new"), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(FormFileInput, props));
 }
-class LibraryPane extends React$1.Component {
+class LibraryPane extends React.Component {
   constructor(props) {
     super(props);
     this.fetchList = () => {
@@ -2068,24 +2068,24 @@ class LibraryPane extends React$1.Component {
     this.fetchList();
   }
   render() {
-    return /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       className: "rjf-upload-modal__pane"
-    }, /*#__PURE__*/React$1.createElement("h3", null, "Media library"), /*#__PURE__*/React$1.createElement("div", {
+    }, /*#__PURE__*/React.createElement("h3", null, "Media library"), /*#__PURE__*/React.createElement("div", {
       className: "rjf-upload-modal__media-container"
     }, this.state.files.map(i => {
-      return /*#__PURE__*/React$1.createElement(MediaTile, _extends({}, i, {
+      return /*#__PURE__*/React.createElement(MediaTile, _extends({}, i, {
         onClick: this.props.onFileSelect,
         sendDeleteRequest: this.props.sendDeleteRequest,
         onFileDelete: this.onFileDelete
       }));
-    })), this.state.loading && /*#__PURE__*/React$1.createElement(Loader, {
+    })), this.state.loading && /*#__PURE__*/React.createElement(Loader, {
       className: "rjf-upload-modal__media-loader"
-    }), !this.state.loading && this.state.hasMore && /*#__PURE__*/React$1.createElement("div", null, /*#__PURE__*/React$1.createElement(Button, {
+    }), !this.state.loading && this.state.hasMore && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Button, {
       onClick: this.onLoadMore,
       className: "upload-modal__media-load"
-    }, /*#__PURE__*/React$1.createElement(Icon, {
+    }, /*#__PURE__*/React.createElement(Icon, {
       name: "arrow-down"
-    }), " View more")), !this.state.hasMore && /*#__PURE__*/React$1.createElement("div", {
+    }), " View more")), !this.state.hasMore && /*#__PURE__*/React.createElement("div", {
       className: "rjf-upload-modal__media-end-message"
     }, this.state.files.length ? 'End of list' : 'No files found'));
   }
@@ -2093,25 +2093,25 @@ class LibraryPane extends React$1.Component {
 const DEFAULT_THUBNAIL = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23999999' viewBox='0 0 16 16'%3E%3Cpath d='M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z'/%3E%3C/svg%3E";
 function MediaTile(props) {
   let metadata = props.metadata || {};
-  return /*#__PURE__*/React$1.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "rjf-upload-modal__media-tile"
-  }, /*#__PURE__*/React$1.createElement(MediaTileMenu, {
+  }, /*#__PURE__*/React.createElement(MediaTileMenu, {
     value: props.value,
     sendDeleteRequest: props.sendDeleteRequest,
     onFileDelete: props.onFileDelete
-  }), /*#__PURE__*/React$1.createElement("div", {
+  }), /*#__PURE__*/React.createElement("div", {
     className: "rjf-upload-modal__media-tile-inner",
     tabIndex: "0",
     onClick: () => props.onClick(props.value)
-  }, /*#__PURE__*/React$1.createElement("img", {
+  }, /*#__PURE__*/React.createElement("img", {
     src: props.thumbnail ? props.thumbnail : DEFAULT_THUBNAIL
-  }), props.metadata && /*#__PURE__*/React$1.createElement("div", {
+  }), props.metadata && /*#__PURE__*/React.createElement("div", {
     className: "rjf-upload-modal__media-tile-metadata"
   }, Object.getOwnPropertyNames(metadata).map(key => {
-    return /*#__PURE__*/React$1.createElement("span", null, metadata[key]);
+    return /*#__PURE__*/React.createElement("span", null, metadata[key]);
   }))));
 }
-class MediaTileMenu extends React$1.Component {
+class MediaTileMenu extends React.Component {
   constructor(props) {
     super(props);
     this.toggleMenu = e => {
@@ -2148,22 +2148,22 @@ class MediaTileMenu extends React$1.Component {
     };
   }
   render() {
-    return /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       className: this.state.open ? 'rjf-dropdown open' : 'rjf-dropdown'
-    }, /*#__PURE__*/React$1.createElement(Button, {
+    }, /*#__PURE__*/React.createElement(Button, {
       className: "rjf-dropdown-toggler",
       alterClassName: false,
       title: this.state.open ? 'Close menu' : 'Open menu',
       onClick: this.toggleMenu
-    }, /*#__PURE__*/React$1.createElement(Icon, {
+    }, /*#__PURE__*/React.createElement(Icon, {
       name: this.state.open ? 'x-lg' : 'three-dots-vertical'
-    })), this.state.open && /*#__PURE__*/React$1.createElement("div", {
+    })), this.state.open && /*#__PURE__*/React.createElement("div", {
       className: "rjf-dropdown-items"
-    }, /*#__PURE__*/React$1.createElement(Button, {
+    }, /*#__PURE__*/React.createElement(Button, {
       className: "rjf-dropdown-item rjf-text-danger",
       alterClassName: false,
       onClick: this.handleDeleteClick
-    }, this.state.loading && /*#__PURE__*/React$1.createElement(Loader, null), this.state.loading ? ' Deleting...' : 'Delete')));
+    }, this.state.loading && /*#__PURE__*/React.createElement(Loader, null), this.state.loading ? ' Deleting...' : 'Delete')));
   }
 }
 
@@ -2275,8 +2275,8 @@ function FormField(props) {
       inputProps.type = 'text';
       InputField = FormInput;
   }
-  return /*#__PURE__*/React$1.createElement(InputField, _extends({}, inputProps, {
-    label: props.editable ? /*#__PURE__*/React$1.createElement("span", null, props.schema.title, " ", /*#__PURE__*/React$1.createElement(Button, {
+  return /*#__PURE__*/React.createElement(InputField, _extends({}, inputProps, {
+    label: props.editable ? /*#__PURE__*/React.createElement("span", null, props.schema.title, " ", /*#__PURE__*/React.createElement(Button, {
       className: "edit",
       onClick: props.onEdit,
       title: "Edit"
@@ -2300,13 +2300,13 @@ function getStringFormRow(args) {
       errorMap
     } = args,
     fieldProps = _objectWithoutPropertiesLoose(args, _excluded);
-  return /*#__PURE__*/React$1.createElement(FormRow, {
+  return /*#__PURE__*/React.createElement(FormRow, {
     key: name,
     onRemove: removable ? e => onRemove(name) : null,
     onMoveUp: onMoveUp,
     onMoveDown: onMoveDown,
     hidden: schema.widget === 'hidden'
-  }, /*#__PURE__*/React$1.createElement(FormField, _extends({
+  }, /*#__PURE__*/React.createElement(FormField, _extends({
     data: data,
     schema: schema,
     name: name,
@@ -2377,13 +2377,13 @@ function getArrayFormRow(args) {
       } else {
         // oneOf/anyOf
         if (schema.items.hasOwnProperty('oneOf')) {
-          groups.push( /*#__PURE__*/React$1.createElement(OneOf, {
+          groups.push( /*#__PURE__*/React.createElement(OneOf, {
             parentArgs: args,
             nextArgs: _extends({}, nextArgs),
             key: "oneOf_" + name + '_' + i
           }));
         } else if (schema.items.hasOwnProperty('anyOf')) {
-          groups.push( /*#__PURE__*/React$1.createElement(AnyOf, {
+          groups.push( /*#__PURE__*/React.createElement(AnyOf, {
             parentArgs: args,
             nextArgs: _extends({}, nextArgs),
             key: "anyOf_" + name + '_' + i
@@ -2402,7 +2402,7 @@ function getArrayFormRow(args) {
       rowError = args.errorMap[getCoordsFromName(coords)];
       if (typeof rowError === 'string') rowError = [rowError];
     }
-    rows = /*#__PURE__*/React$1.createElement(FormGroup, {
+    rows = /*#__PURE__*/React.createElement(FormGroup, {
       level: level,
       schema: schema,
       addable: addable,
@@ -2410,15 +2410,15 @@ function getArrayFormRow(args) {
       editable: args.editable,
       onEdit: args.onKeyEdit,
       key: 'row_group_' + name
-    }, rowError && rowError.map((error, i) => /*#__PURE__*/React$1.createElement("div", {
+    }, rowError && rowError.map((error, i) => /*#__PURE__*/React.createElement("div", {
       className: "rjf-error-text",
       key: i
     }, error)), rows);
     if (args.parentType === 'object' && args.removable) {
-      rows = /*#__PURE__*/React$1.createElement("div", {
+      rows = /*#__PURE__*/React.createElement("div", {
         className: "rjf-form-group-wrapper",
         key: 'row_group_wrapper_' + name
-      }, /*#__PURE__*/React$1.createElement(FormRowControls, {
+      }, /*#__PURE__*/React.createElement(FormRowControls, {
         onRemove: e => onRemove(name)
       }), rows);
     }
@@ -2426,31 +2426,31 @@ function getArrayFormRow(args) {
   if (groups.length) {
     let groupError = args.errorMap[getCoordsFromName(coords)];
     if (typeof groupError === 'string') groupError = [groupError];
-    let groupTitle = schema.title ? /*#__PURE__*/React$1.createElement(GroupTitle, {
+    let groupTitle = schema.title ? /*#__PURE__*/React.createElement(GroupTitle, {
       editable: args.editable,
       onEdit: args.onKeyEdit
     }, schema.title) : null;
-    let groupDescription = schema.description ? /*#__PURE__*/React$1.createElement(GroupDescription, null, schema.description) : null;
-    groups = /*#__PURE__*/React$1.createElement("div", {
+    let groupDescription = schema.description ? /*#__PURE__*/React.createElement(GroupDescription, null, schema.description) : null;
+    groups = /*#__PURE__*/React.createElement("div", {
       key: 'group_' + name,
       className: "rjf-form-group-wrapper"
-    }, args.parentType === 'object' && args.removable && /*#__PURE__*/React$1.createElement(FormRowControls, {
+    }, args.parentType === 'object' && args.removable && /*#__PURE__*/React.createElement(FormRowControls, {
       onRemove: e => onRemove(name)
-    }), /*#__PURE__*/React$1.createElement("div", {
+    }), /*#__PURE__*/React.createElement("div", {
       className: "rjf-form-group"
-    }, /*#__PURE__*/React$1.createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       className: level > 0 ? "rjf-form-group-inner" : ""
-    }, groupTitle, groupDescription, groupError && groupError.map((error, i) => /*#__PURE__*/React$1.createElement("div", {
+    }, groupTitle, groupDescription, groupError && groupError.map((error, i) => /*#__PURE__*/React.createElement("div", {
       className: "rjf-error-text",
       key: i
-    }, error)), groups.map((i, index) => /*#__PURE__*/React$1.createElement("div", {
+    }, error)), groups.map((i, index) => /*#__PURE__*/React.createElement("div", {
       className: "rjf-form-group-wrapper",
       key: 'group_wrapper_' + name + '_' + index
-    }, /*#__PURE__*/React$1.createElement(FormRowControls, {
+    }, /*#__PURE__*/React.createElement(FormRowControls, {
       onRemove: removable ? e => onRemove(joinCoords(name, index)) : null,
       onMoveUp: index > 0 && !isReadonly ? e => onMove(joinCoords(name, index), joinCoords(name, index - 1)) : null,
       onMoveDown: index < groups.length - 1 && !isReadonly ? e => onMove(joinCoords(name, index), joinCoords(name, index + 1)) : null
-    }), i)), addable && /*#__PURE__*/React$1.createElement(Button, {
+    }), i)), addable && /*#__PURE__*/React.createElement(Button, {
       className: "add",
       onClick: e => onAdd(getBlankData(schema.items, args.getRef), coords),
       title: "Add new item"
@@ -2528,13 +2528,13 @@ function getObjectFormRow(args) {
     } else {
       // oneOf/anyOf
       if (nextArgs.schema.hasOwnProperty('oneOf')) {
-        rows.push( /*#__PURE__*/React$1.createElement(OneOf, {
+        rows.push( /*#__PURE__*/React.createElement(OneOf, {
           parentArgs: args,
           nextArgs: _extends({}, nextArgs),
           key: "oneOf_" + name + '_' + i
         }));
       } else if (nextArgs.schema.hasOwnProperty('anyOf')) {
-        rows.push( /*#__PURE__*/React$1.createElement(AnyOf, {
+        rows.push( /*#__PURE__*/React.createElement(AnyOf, {
           parentArgs: args,
           nextArgs: _extends({}, nextArgs),
           key: "anyOf_" + name + '_' + i
@@ -2547,7 +2547,7 @@ function getObjectFormRow(args) {
 
   // oneOf
   if (schema.hasOwnProperty('oneOf')) {
-    rows.push( /*#__PURE__*/React$1.createElement(OneOf, {
+    rows.push( /*#__PURE__*/React.createElement(OneOf, {
       parentArgs: args,
       key: "oneOf_" + name
     }));
@@ -2555,7 +2555,7 @@ function getObjectFormRow(args) {
 
   // anyOf
   if (schema.hasOwnProperty('anyOf')) {
-    rows.push( /*#__PURE__*/React$1.createElement(AnyOf, {
+    rows.push( /*#__PURE__*/React.createElement(AnyOf, {
       parentArgs: args,
       key: "anyOf_" + name
     }));
@@ -2564,7 +2564,7 @@ function getObjectFormRow(args) {
     let coords = name;
     let groupError = args.errorMap[getCoordsFromName(coords)];
     if (typeof groupError === 'string') groupError = [groupError];
-    rows = /*#__PURE__*/React$1.createElement(FormGroup, {
+    rows = /*#__PURE__*/React.createElement(FormGroup, {
       level: level,
       schema: schema,
       addable: schema.additionalProperties && !isReadonly,
@@ -2572,15 +2572,15 @@ function getObjectFormRow(args) {
       editable: args.editable,
       onEdit: args.onKeyEdit,
       key: 'row_group_' + name
-    }, groupError && groupError.map((error, i) => /*#__PURE__*/React$1.createElement("div", {
+    }, groupError && groupError.map((error, i) => /*#__PURE__*/React.createElement("div", {
       className: "rjf-error-text",
       key: i
     }, error)), rows);
     if (args.parentType === 'object' && args.removable) {
-      rows = /*#__PURE__*/React$1.createElement("div", {
+      rows = /*#__PURE__*/React.createElement("div", {
         className: "rjf-form-group-wrapper",
         key: 'row_group_wrapper_' + name
-      }, /*#__PURE__*/React$1.createElement(FormRowControls, {
+      }, /*#__PURE__*/React.createElement(FormRowControls, {
         onRemove: e => onRemove(name)
       }), rows);
     }
@@ -2591,13 +2591,13 @@ function getOneOfFormRow(args) {
   /* For top-level oneOf when type is not provided.
    This will try to find appropriate option for the given data.
   */
-  return /*#__PURE__*/React$1.createElement(OneOfTopLevel, {
+  return /*#__PURE__*/React.createElement(OneOfTopLevel, {
     args: args
   });
 }
 function getAnyOfFormRow(args) {
   /* For top-level oneOf when type is not provided */
-  return /*#__PURE__*/React$1.createElement(OneOfTopLevel, {
+  return /*#__PURE__*/React.createElement(OneOfTopLevel, {
     args: args,
     schemaName: "anyOf"
   });
@@ -2610,7 +2610,7 @@ function getAllOfFormRow(args) {
 
   return getObjectFormRow(args);
 }
-class OneOfTopLevel extends React$1.Component {
+class OneOfTopLevel extends React.Component {
   constructor(props) {
     super(props);
     this.findSelectedOption = () => {
@@ -2686,11 +2686,11 @@ class OneOfTopLevel extends React$1.Component {
       schema: schema
     }));
     let selectorLabel = this.props.args.schema.title || null;
-    return /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       className: "rjf-form-group rjf-oneof-group rjf-oneof-group-top-level"
-    }, /*#__PURE__*/React$1.createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       className: "rjf-oneof-selector"
-    }, /*#__PURE__*/React$1.createElement(FormSelectInput, {
+    }, /*#__PURE__*/React.createElement(FormSelectInput, {
       value: selectedOption,
       options: this.getOptions(),
       onChange: this.handleOptionChange,
@@ -2699,7 +2699,7 @@ class OneOfTopLevel extends React$1.Component {
     })), rows);
   }
 }
-class OneOf extends React$1.Component {
+class OneOf extends React.Component {
   constructor(props) {
     super(props);
     /* Uncomment when caching is implemente
@@ -2920,11 +2920,11 @@ class OneOf extends React$1.Component {
     }));
     let selectorLabel = null;
     if (this.props.nextArgs) selectorLabel = this.props.nextArgs.schema.title || null;
-    return /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       className: "rjf-form-group rjf-oneof-group"
-    }, /*#__PURE__*/React$1.createElement("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       className: "rjf-oneof-selector"
-    }, /*#__PURE__*/React$1.createElement(FormSelectInput, {
+    }, /*#__PURE__*/React.createElement(FormSelectInput, {
       value: selectedOption,
       options: this.getOptions(),
       onChange: e => this.handleOptionChange(e, selectedOption),
@@ -2934,7 +2934,7 @@ class OneOf extends React$1.Component {
   }
 }
 function AnyOf(props) {
-  return /*#__PURE__*/React$1.createElement(OneOf, _extends({}, props, {
+  return /*#__PURE__*/React.createElement(OneOf, _extends({}, props, {
     schemaName: "anyOf"
   }));
 }
@@ -3274,7 +3274,7 @@ class EditorState {
   }
 }
 
-class ReactJSONForm extends React$1.Component {
+class ReactJSONForm extends React.Component {
   constructor(..._args) {
     super(..._args);
     this.handleChange = (coords, value) => {
@@ -3361,11 +3361,11 @@ class ReactJSONForm extends React$1.Component {
     };
   }
   render() {
-    return /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React.createElement("div", {
       className: "rjf-form-wrapper"
-    }, /*#__PURE__*/React$1.createElement("fieldset", {
+    }, /*#__PURE__*/React.createElement("fieldset", {
       className: "module aligned"
-    }, /*#__PURE__*/React$1.createElement(EditorContext.Provider, {
+    }, /*#__PURE__*/React.createElement(EditorContext.Provider, {
       value: {
         fileHandler: this.props.fileHandler,
         fileHandlerArgs: this.props.fileHandlerArgs
@@ -3732,7 +3732,7 @@ function FormInstance(config) {
   this.onChange = this.onChange.bind(this);
   this.render = function () {
     try {
-      ReactDOM.render( /*#__PURE__*/React$1.createElement(FormContainer, {
+      ReactDOM.render( /*#__PURE__*/React.createElement(FormContainer, {
         schema: this.schema,
         dataInputId: this.dataInputId,
         data: this.data,
@@ -3743,7 +3743,7 @@ function FormInstance(config) {
         readonly: this.readonly
       }), document.getElementById(this.containerId));
     } catch (error) {
-      ReactDOM.render( /*#__PURE__*/React$1.createElement(ErrorReporter, {
+      ReactDOM.render( /*#__PURE__*/React.createElement(ErrorReporter, {
         error: error
       }), document.getElementById(this.containerId));
     }
@@ -3776,7 +3776,7 @@ function createForm(config) {
 function getFormInstance(id) {
   return FORM_INSTANCES[id];
 }
-class FormContainer extends React$1.Component {
+class FormContainer extends React.Component {
   constructor(props) {
     super(props);
     this.populateDataInput = data => {
@@ -3823,7 +3823,7 @@ class FormContainer extends React$1.Component {
     });
   }
   render() {
-    return /*#__PURE__*/React$1.createElement(ReactJSONForm, {
+    return /*#__PURE__*/React.createElement(ReactJSONForm, {
       editorState: this.state.editorState,
       onChange: this.handleChange,
       fileHandler: this.props.fileHandler,
@@ -3836,11 +3836,11 @@ class FormContainer extends React$1.Component {
 function ErrorReporter(props) {
   /* Component for displaying errors to the user related to schema */
 
-  return /*#__PURE__*/React$1.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       color: '#f00'
     }
-  }, /*#__PURE__*/React$1.createElement("p", null, "(!) ", props.error.toString()), /*#__PURE__*/React$1.createElement("p", null, "Check browser console for more details about the error."));
+  }, /*#__PURE__*/React.createElement("p", null, "(!) ", props.error.toString()), /*#__PURE__*/React.createElement("p", null, "Check browser console for more details about the error."));
 }
 
 export { DataValidator, EditorState, ReactJSONForm, createForm, getFormInstance };

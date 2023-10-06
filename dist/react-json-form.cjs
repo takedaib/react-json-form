@@ -1,10 +1,10 @@
-var React$1 = require('react');
+var React = require('react');
 var ReactModal = require('react-modal');
 var ReactDOM = require('react-dom');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
-var React__default = /*#__PURE__*/_interopDefaultLegacy(React$1);
+var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 var ReactModal__default = /*#__PURE__*/_interopDefaultLegacy(ReactModal);
 var ReactDOM__default = /*#__PURE__*/_interopDefaultLegacy(ReactDOM);
 
@@ -487,7 +487,7 @@ function Button({
       className = className + 'rjf-' + classes[i] + '-button ';
     }
   }
-  return /*#__PURE__*/React.createElement("button", _extends({
+  return /*#__PURE__*/React__default["default"].createElement("button", _extends({
     className: className.trim(),
     type: "button"
   }, props), props.children);
@@ -496,7 +496,7 @@ function Button({
 function Loader(props) {
   let className = 'rjf-loader';
   if (props.className) className = className + ' ' + props.className;
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React__default["default"].createElement("div", {
     className: className
   });
 }
