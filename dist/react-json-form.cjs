@@ -2461,7 +2461,7 @@ function getArrayFormRow(args) {
       title: "Add new item"
     }, "Add item"))));
   }
-  return [...rows, ...groups];
+  return [rows, groups];
 }
 function getObjectFormRow(args) {
   let {

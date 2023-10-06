@@ -366,7 +366,7 @@ export function getArrayFormRow(args) {
         )
     }
 
-    return [...rows, ...groups];
+    return [rows, groups];
 }
 
 
